@@ -1,5 +1,7 @@
 import urllib2
 
+print 'courtesy to doctormckay.com'
+
 #while true to make sure we dont need to keep restarting it every time we find the user status
 while True:
         
