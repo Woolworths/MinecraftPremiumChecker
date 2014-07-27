@@ -12,7 +12,7 @@ while True:
     # opens url and reads it (and stores it in string)
     parse = urllib2.urlopen(url)
     html = parse.read()
-	str(html)
+    str(html)
 	
     #  this is the part that checks is user is premium or not
     def runName(name):
