@@ -4,9 +4,7 @@ import urllib2
 while True:
         
     # gets username, makes sure it's a string and makes it lowercase
-    user = raw_input('>>> = ')
-    user = str(user)
-    user = user.lower()
+    user = str(raw_input('>>> = ')).lower()
     
     # gets the url
     url = 'https://minecraft.net/haspaid.jsp?user=' + user
@@ -14,15 +12,16 @@ while True:
     # opens url and reads it (and stores it in string)
     parse = urllib2.urlopen(url)
     html = parse.read()
-
+	str(html)
+	
     #  this is the part that checks is user is premium or not
     def runName(name):
         # if the success label in the html code (if user is premium) then print
-        if 'true' in html:
+        if('true' in html):
             print 'The user' + ' ' + name + ' ' + 'is premium!'
             
         # else if success label NOT in html then print
-        elif 'false' in html:
+        elif('false' in html):
             print 'The user' + ' ' + name + ' ' + 'is not premium!'
 
         # if a strange error has occured
